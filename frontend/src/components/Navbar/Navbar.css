@@ -1,95 +1,29 @@
-.navbar{
-  padding: 20px 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.navbar .logo{
-  width: 150px;
-}
-.navbar-menu{
-  display: flex;
-  list-style: none;
-  gap: 20px;
-  color: #49557e;
-  font-size: 18px;
-}
-.navbar-right{
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-.navbar button{
-  background: transparent;
-  font-size: 16px;
-  color: #49557e;
-  border: 1px solid tomato;
-  padding: 10px 30px;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: .3;
-}
-.navbar button:hover{
-  background-color: #fff4f2;
-}
-.navbar .active{
-  padding-bottom: 2px;
-  border-bottom: 2px solid #49557e;
-}
-.navbar li{
-  cursor: pointer;
-}
-.navbar-search-icon{
-  position: relative;
-}
-.navbar-search-icon .dot{
+.navbar-submenu {
   position: absolute;
-  min-width: 10px;
-  min-height: 10px;
-  background-color: tomato;
-  border-radius: 5px;
-  top:-8px;
-  right: -8px;
-}
-.navbar-profile {
-  position : relative ;
+  top: 60px; /* Adjust this based on your header's height */
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  display: none;
 }
 
-.navbar-profile{
-  position :absolute ;
-  display : none;
-  right : 0;
-  z-index : 1;
+.navbar-menu a:hover + .navbar-submenu,
+.navbar-submenu:hover {
+  display: block;
 }
 
-.navbar-profile:hover .nav-profile-dropdown{
-  display: flex;
-  flex-direction : colum;
-  gap: 10px;
-  background-color: #fff2ef;
-  padding : 12px 25px;
-  border-radius: 4px;
-  border: 1px solid tomato;
-  outline : 2px solid white;
-  list-style : none;
-
+.navbar-submenu ul {
+  list-style: none;
+  padding: 0;
 }
 
-.nav-profile-dropdown li{
-  display: flex;
-  align-items: center;
-  gap:10px;
-  cursor:pointer;
+.navbar-submenu ul li {
+  padding: 10px;
+  cursor: pointer;
 }
 
-.nav-profile-dropdown img {
-  width :20px;
-}
-.nav-profile-dropdown li:hover{
-  color : tomato;
-}
-@media (max-width:1050px){
-  .navbar .logo {
-    width :140px;
-  }
+.navbar-submenu ul li:hover {
+  background-color: #f1f1f1;
 }

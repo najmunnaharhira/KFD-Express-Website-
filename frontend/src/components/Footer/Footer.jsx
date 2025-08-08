@@ -7,58 +7,46 @@ const Footer = () => {
     <div className='footer' id='footer'>
       <div className='footer-content'>
         <div className="footer-content-left">
-           <img src={assets.logo} alt="logo"/>
-           <p>Fresh flavors for every craving — discover the future of food with Tomato in 2025. Your favorite meals, delivered with love and taste.</p>
-         {/* <div className="footer-social-icons">
-            <img src={assets.facebook_icon} alt="facebook" />
-            <img src={assets.twitter_icon} alt="twitter" />
-            <img src={assets.linkedin_icon} alt="linkedin" />
-           </div> */}
+          <img src={assets.logo} alt="logo" />
+          <p>🍽 Craving Something Delicious? Come experience the Genuine Taste from China — right here at KFD Express! 🥢</p>
+          
           <div className="footer-social-icons">
-  <a
-    href="https://www.facebook.com/najmunnahar360"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img src={assets.facebook_icon} alt="facebook" />
-  </a>
-  <a
-    href="https://www.linkedin.com/in/najmunnaharhira360"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img src={assets.linkedin_icon} alt="linkedin" />
-  </a>
-  <a
-    href="https://twitter.com/najmunnaharhira360"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img src={assets.twitter_icon} alt="twitter" />
-  </a>
-</div>
-
-        </div>  
-        <div className="footer-content-center">
-           {/* <h2>COMPANY</h2> */}
-           <ul>
-             <li>Home</li>
-             <li>About us</li>
-             <li>Delivery</li>
-             <li>Privacy policy</li>
-           </ul>
+            <a
+              href="https://www.facebook.com/kfdexpressbd"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={assets.facebook_icon} alt="facebook" />
+            </a>
+         
+          </div>
         </div>
+
+        <div className="footer-content-center">
+          <h2>Visit Us:</h2>
+          <ul>
+            <li>🏠 Banani Branch – House 53, 1st Floor, Road 17, Banani (Near Fu-Wang Tower)</li>
+            <li>🏢 Uttara Branch – Mascot Plaza, Level 8</li>
+            <li>📲 Available on Foodi | Pathao | Food Panda</li>
+          </ul>
+        </div>
+
         <div className="footer-content-right">
-            <h2>GET IN TOUCH</h2>
-            <ul>
-              <li>+8801647431836</li>
-              <li>contact@tomato.com</li>
-            </ul>
+          <h2>Get In Touch:</h2>
+          <ul>
+            <li>📞 Banani – 01311066552</li>
+            <li>📞 Uttara – 01325885200</li>
+          </ul>
         </div>
       </div>
-      <hr/>
+      
+      <hr />
+      
       <p className="footer-copyright">
-        © 2025 Tomato.com — All Rights Reserved.
+        ✨ Come for the taste. Stay for the experience. Because at KFD, it’s not just food — it’s a feeling. ❤
+      </p>
+      <p className="footer-copyright">
+        © 2025 KFD Express — All Rights Reserved.
       </p>
     </div>
   );
