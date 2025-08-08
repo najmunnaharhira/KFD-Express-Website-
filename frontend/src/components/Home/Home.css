@@ -1,0 +1,160 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  color: #333;
+}
+
+p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Container */
+div {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styling */
+header {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+header p {
+  text-align: center;
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Explore Menu */
+.explore-menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.explore-menu-container h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.explore-menu-container select {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.explore-menu-container select:hover {
+  border-color: #333;
+}
+
+/* Food Display Section */
+.food-display-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.food-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.food-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.food-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.food-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.food-card .price {
+  font-size: 1.25rem;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.food-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .food-display-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .explore-menu-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .explore-menu-container select {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .explore-menu-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .food-card {
+    padding: 15px;
+  }
+
+  .food-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .food-card p {
+    font-size: 0.9rem;
+  }
+
+  .food-card .price {
+    font-size: 1rem;
+  }
+}
