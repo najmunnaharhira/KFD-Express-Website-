@@ -1,12 +1,13 @@
 import "./Navbar.css";
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { assets } from "../../assets/assets";
+import { StoreContext } from "../../context/StoreContext";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
   const [showSubMenu, setShowSubMenu] = useState(false);
-  const navigate = useNavigate();
+  const { getTotalCartItems } = useContext(StoreContext);
 
   return (
     <div className="navbar">
@@ -47,7 +48,12 @@ const Navbar = () => {
       </ul>
 
       <div className="navbar-right">
-        <img src={assets.search_icon} alt="Search" />
+        <Link to="/cart" className="navbar-cart">
+          <img src={assets.basket_icon} alt="Cart" />
+          {getTotalCartItems() > 0 && (
+            <span className="navbar-cart-count">{getTotalCartItems()}</span>
+          )}
+        </Link>
       </div>
     </div>
   );

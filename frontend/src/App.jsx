@@ -1,7 +1,8 @@
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
-import React, { useState } from "react";
+import Cart from "./components/Cart/Cart";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/cart' element={<Cart />} />
         </Routes>
       </div>
       <Footer />

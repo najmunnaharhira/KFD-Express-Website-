@@ -39,14 +39,24 @@
 .food-item-img-container{
   position: relative;
 }
-.food-item-img-container .add{
-  width: 35px;
+.food-item-img-container .add,
+.food-item-img-container .add-button{
+  width: 45px;
+  height: 45px;
   position: absolute;
   bottom: 15px;
   right: 15px;
   cursor: pointer;
   border-radius: 50%;
-
+  background: black;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.food-item-img-container .add-button img{
+  width: 24px;
+  filter: invert(1);
 }
 .food-item-counter{
   position: absolute;
