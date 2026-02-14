@@ -8,14 +8,26 @@
 }
 body{
   min-height: 100vh;
+  overflow-x: hidden;
+}
+img{
+  max-width: 100%;
+  height: auto;
 }
 a{
   text-decoration: none;
   color: inherit;
 }
 .app{
-  width: 80%;
-  margin: auto;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .app {
+    width: 95%;
+  }
 }
 @keyframes fadeIn{
   0%{

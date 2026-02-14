@@ -45,9 +45,6 @@ const FoodItem = ({ id, name, description, price, image }) => {
         <p aria-label="Food Description" className="food-item-desc">
           {description ? description : "No description available"}
         </p>
-        <p aria-label="Food Item price" className="food-item-price">
-          ${price}
-        </p>
       </div>
     </div>
   );

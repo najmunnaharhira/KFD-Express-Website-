@@ -93,7 +93,7 @@ const Cart = () => {
               <img src={item.image || assets.header_img} alt={item.name} />
               <div className="cart-item-info">
                 <p className="cart-item-name">{item.name}</p>
-                <p className="cart-item-price">${item.price}</p>
+                <p className="cart-item-price">{item.price} Tk</p>
                 <div className="cart-item-counter">
                   <button onClick={() => removeFromCart(id)}>
                     <img src={assets.remove_icon_red} alt="Remove" />
@@ -104,7 +104,7 @@ const Cart = () => {
                   </button>
                 </div>
               </div>
-              <p className="cart-item-total">${item.price * cartItems[id]}</p>
+              <p className="cart-item-total">{item.price * cartItems[id]} Tk</p>
             </div>
           );
         })}
@@ -112,7 +112,7 @@ const Cart = () => {
 
       <div className="cart-bottom">
         <div className="cart-total">
-          <h2>Subtotal: ${getTotalCartAmount()}</h2>
+          <h2>Subtotal: {getTotalCartAmount()} Tk</h2>
         </div>
 
         <form className="cart-form" onSubmit={placeOrder}>
@@ -136,13 +136,7 @@ const Cart = () => {
             value={form.address}
             onChange={(e) => setForm({ ...form, address: e.target.value })}
           />
-          <select
-            value={form.branch}
-            onChange={(e) => setForm({ ...form, branch: e.target.value })}
-          >
-            <option value="Banani">Banani Branch</option>
-            <option value="Uttara">Uttara Branch</option>
-          </select>
+          <p className="cart-branch-note">📍 Orders for Banani branch only</p>
           <select
             value={form.deliveryMethod}
             onChange={(e) => setForm({ ...form, deliveryMethod: e.target.value })}

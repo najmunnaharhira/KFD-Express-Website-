@@ -1,3 +1,46 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.navbar .logo {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+}
+
+.navbar-menu a {
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-menu a.active {
+  color: tomato;
+  padding-bottom: 2px;
+  border-bottom: 2px solid tomato;
+}
+
+.navbar-menu {
+  position: relative;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
 .navbar-cart {
   position: relative;
   display: flex;
@@ -6,6 +49,8 @@
 
 .navbar-cart img {
   width: 28px;
+  max-width: 100%;
+  height: auto;
   cursor: pointer;
 }
 
@@ -54,4 +99,89 @@
 
 .navbar-submenu ul li:hover {
   background-color: #f1f1f1;
+}
+
+/* Mobile menu toggle */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #333;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .navbar .logo {
+    width: 120px;
+  }
+
+  .navbar-menu {
+    gap: 24px;
+  }
+
+  .navbar-menu a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .navbar .logo {
+    width: 100px;
+  }
+
+  .navbar-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 20px;
+    gap: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 100;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-submenu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    display: none !important;
+  }
+
+  .navbar-menu.open .navbar-submenu {
+    display: block !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .logo {
+    width: 80px;
+  }
 }

@@ -7,20 +7,26 @@ import { StoreContext } from "../../context/StoreContext";
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
   const [showSubMenu, setShowSubMenu] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const { getTotalCartItems } = useContext(StoreContext);
 
   return (
     <div className="navbar">
-      <Link to="/">
+      <Link to="/" onClick={() => setMenuOpen(false)}>
         <img src={assets.logo} alt="KFD Express" className="logo" />
       </Link>
-      <ul className="navbar-menu">
-        <Link to="/" onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>
+      <button className="navbar-toggle" aria-label="Toggle menu" onClick={() => setMenuOpen(!menuOpen)}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul className={`navbar-menu ${menuOpen ? "open" : ""}`}>
+        <Link to="/" onClick={() => { setMenu("home"); setMenuOpen(false); }} className={menu === "home" ? "active" : ""}>
           Home
         </Link>
         <a
           href="#explore-menu"
-          onClick={() => setMenu("menu")}
+          onClick={() => { setMenu("menu"); setMenuOpen(false); }}
           className={menu === "menu" ? "active" : ""}
           onMouseEnter={() => setShowSubMenu(true)}
           onMouseLeave={() => setShowSubMenu(false)}
@@ -42,7 +48,7 @@ const Navbar = () => {
           </div>
         )}
 
-        <a href="#footer" onClick={() => setMenu("contact-us")} className={menu === "contact-us" ? "active" : ""}>
+        <a href="#footer" onClick={() => { setMenu("contact-us"); setMenuOpen(false); }} className={menu === "contact-us" ? "active" : ""}>
           Contact Us
         </a>
       </ul>

@@ -26,7 +26,6 @@ const Footer = () => {
           <h2>Visit Us:</h2>
           <ul>
             <li>🏠 Banani Branch – House 53, 1st Floor, Road 17, Banani (Near Fu-Wang Tower)</li>
-            <li>🏢 Uttara Branch – Mascot Plaza, Level 8</li>
             <li>📲 Available on Foodi | Pathao | Food Panda</li>
           </ul>
         </div>
@@ -35,7 +34,6 @@ const Footer = () => {
           <h2>Get In Touch:</h2>
           <ul>
             <li>📞 Banani – 01311066552</li>
-            <li>📞 Uttara – 01325885200</li>
           </ul>
         </div>
       </div>

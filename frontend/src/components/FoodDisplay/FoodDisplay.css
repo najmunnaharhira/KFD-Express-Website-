@@ -12,3 +12,22 @@
   gap:30px;
   row-gap: 50px;
 }
+
+@media (max-width: 768px) {
+  .food-display h2 {
+    font-size: 20px;
+  }
+
+  .food-display-list {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+    row-gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .food-display-list {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
