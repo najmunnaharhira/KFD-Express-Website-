@@ -39,12 +39,19 @@ const Footer = () => {
       </div>
       
       <hr />
+
+      <div className="footer-tech-partner">
+        <span>Tech Partner:</span>
+        <a href="https://chilekotha.top" target="_blank" rel="noopener noreferrer" className="tech-partner-link">
+          <img src={assets.chilekothaLogo} alt="Chilekotha" />
+        </a>
+      </div>
       
       <p className="footer-copyright">
         ✨ Come for the taste. Stay for the experience. Because at KFD, it’s not just food — it’s a feeling. ❤
       </p>
       <p className="footer-copyright">
-        © 2025 KFD Express — All Rights Reserved.
+        © 2026 KFD Express — All Rights Reserved.
       </p>
     </div>
   );
