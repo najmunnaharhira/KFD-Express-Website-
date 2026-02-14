@@ -86,8 +86,9 @@ export const menu_list = [
     { menu_name: "Fried Items", menu_image: exploreMenuImg }
 ]
 
+// Food images from menu: kfd-dumpling, beef-dumplings, chicken-chow, chowmein, rice-meatball, feel-good, leg-day, seal-deal, pick-best
 export const food_list = [
-    /* Dumplings */
+    /* Dumplings - from menu */
     { _id: "1", name: "Chicken Leg Mushroom", image: foodImages[0], price: 340, description: "10Pcs Boiled 340Tk | 10Pcs Fried 395Tk", category: "Dumplings" },
     { _id: "2", name: "Chicken Curry Onion", image: foodImages[0], price: 340, description: "10Pcs Boiled 340Tk | 10Pcs Fried 395Tk", category: "Dumplings" },
     { _id: "3", name: "Beef Onion", image: foodImages[1], price: 420, description: "10Pcs Boiled 420Tk | 10Pcs Fried 450Tk", category: "Dumplings" },
